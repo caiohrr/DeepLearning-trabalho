@@ -26,7 +26,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # Transformação do dataset
 transform = transforms.Compose([
     transforms.Grayscale(num_output_channels=3),  # Converte para 3 canais
-    transforms.Resize((128, 128)),  # Redimensiona para 224x224
+    transforms.Resize((128, 128)),  # Redimensiona para 128x128
     transforms.ToTensor(),
     transforms.Normalize((0.5,), (0.5,))
 ])
